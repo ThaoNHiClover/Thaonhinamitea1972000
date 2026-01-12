@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+body 
+	{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+   { background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+style
+h1 {background-color: #CC9966 , color: white;}
+p {
+	text: left;
+}
+h2 {background-color: #CC9966;color: white;}
+p {
+    text-align: center;
+}
+h3 { list-style-type:none;  margin: 0;  padding: 0;  overflow: hidden;  background-color: #CFB193;}li {  border: 1px solid #db7093; float: left;}li a {  border: 1px solid #db7093; display: block;  color: black;  text-align: ;  padding: 14px 16px}li a:hover {  border: 1px solid #db7093; color: white;  background-color: #CFB193;  font-weight: bold;} 
+heading { text-align: center; } 
+h5 { background- color: #CFB193; } 
+h6 {background- color: #CFB193; float: right; }
+h7 { text-align: left; text-decoration-color: #CFB193; }
+h8 { text- decoration- color: #CFB193; text-align: left:}                            }
+	.card.col-md-4 .card-body .btn.btn-primary,
+.card.col-md-4.col-xl-12 .card-body .btn.btn-primary {
+    background-color: #CFB193;
+}
+body {
+}
+h10 {text-align: left;}.card.col-md-4.col-xl-12 .card-body .btn.btn-primary {
+    background-color: #CFB193;
+}
