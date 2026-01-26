@@ -1,7 +1,7 @@
 <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333;}
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#F1C4F7; color:#333;}
     header {background:#F1C4F7; color:#fff; padding:16px; text-align:center; font-size:24px; font-weight:bold;}
-    nav {display:flex; justify-content:center; gap:20px; background:#FFFF99; padding:10px 0;}
+    nav {display:flex; justify-content:center; gap:20px; background:#F1C4F7; padding:10px 0;}
     nav a {color:#fff; text-decoration:none; font-weight:bold;}
     .hero {text-align:center; padding:40px; background:#e8f5e9;}
     nav {
@@ -68,7 +68,7 @@
     .cart-btn {
       margin-top: 10px;
       padding: 10px 16px;
-      background: #8B4513;
+      background: #F1C4F7;
       color: #fff;
       border: none;
       border-radius: 6px;
@@ -93,4 +93,3 @@
     @media(max-width:600px){.hero h1{font-size:28px;}.product img{height:180px;}}
   </style>@charset "utf-8";
 /* CSS Document */
-
