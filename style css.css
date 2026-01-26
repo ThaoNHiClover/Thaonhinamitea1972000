@@ -3,7 +3,7 @@
     header {background:#F1C4F7; color:#fff; padding:16px; text-align:center; font-size:24px; font-weight:bold;}
     nav {display:flex; justify-content:center; gap:20px; background:#F1C4F7; padding:10px 0;}
     nav a {color:#fff; text-decoration:none; font-weight:bold;}
-    .hero {text-align:center; padding:40px; background:#e8f5e9;}
+    .hero {text-align:center; padding:40px; background:#F1C4F7;}
     nav {
       background: #F1C4F7;
       color: white;
@@ -78,14 +78,14 @@
     .hero h1 {font-size:36px; margin-bottom:10px;}
     .hero p {font-size:18px; color:#555;}
     .product-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:20px; max-width:1200px; margin:0 auto;}
-    .product {background:#fff; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); overflow:visible; display:flex; flex-direction:column;}
+    .product {background:#F1C4F7; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); overflow:visible; display:flex; flex-direction:column;}
     .product img {width:100%; height:220px; object-fit:cover;}
     .product h3 {margin:10px; font-size:20px;}
     .product p {margin:0 10px 10px; color:#666; font-size:14px;}
-    .price {margin:10px; font-size:18px; color:#8B4513; font-weight:bold;}
+    .price {margin:10px; font-size:18px; color:#fff; font-weight:bold;}
     .btn-add {margin:10px; padding:10px; background:#F1C4F7; color:#fff; border:none; border-radius:6px; cursor:pointer; font-size:16px;}
     .btn-add:hover {background:#F1C4F7;}
-    .cart {position:fixed; top:20px; right:20px; background:#fff; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.2); padding:16px; width:280px; display:none;}
+    .cart {position:fixed; top:20px; right:20px; background:#F1C4F7; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.2); padding:16px; width:280px; display:none;}
     .cart h4 {margin-top:0;}
     .cart-item {display:flex; justify-content:space-between; font-size:14px; margin-bottom:6px;}
     .checkout {background:#8B4513; color:#fff; border:none; padding:10px; width:100%; margin-top:10px; border-radius:6px; cursor:pointer;}
@@ -93,3 +93,4 @@
     @media(max-width:600px){.hero h1{font-size:28px;}.product img{height:180px;}}
   </style>@charset "utf-8";
 /* CSS Document */
+
