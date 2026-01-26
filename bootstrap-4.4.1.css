@@ -548,6 +548,21 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+body {
+    background-color: #DD9954;
+}
+#carouselExampleIndicators1 {
+}
+#carouselExampleIndicators1 {
+    background-color: #AB5D22;
+}
+body {
+    background-color: #ECCF92;
+}
+
+
+
+
 
 @media (min-width: 576px) {
   .container {
