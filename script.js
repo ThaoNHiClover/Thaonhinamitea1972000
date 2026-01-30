@@ -19,8 +19,8 @@ async function loadProducts() {
           <img src="${p.image}" class="card-img-top" style="height:200px;object-fit:cover">
           <div class="card-body text-center">
             <h5 class="card-title">${p.name}</h5>
-            <p class="card-text text-danger font-weight-bold">${formatPrice(p.price)}</p>
-            <button class="btn btn-success" onclick="openSizeModal('${p.id}', '${p.name.replace(/'/g, "\\'")}',   ${p.priceS},
+            <p class="card-text text-danger font-weight-bold">S: ${formatPrice(p.priceS)} | L: ${formatPrice(p.priceL)}</p>
+            <button class="btn btn-success" onclick="addtoCart('${p.id}', '${p.name.replace(/'/g, "\\'")}',   ${p.priceS},
   ${p.priceL})">
               🛒 Thêm vào giỏ
             </button>
