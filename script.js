@@ -40,10 +40,11 @@ async function loadProducts() {
   }
 }
 // Thêm vào giỏ hàng
+// Thêm vào giỏ hàng
 let cart = []
 let currentProduct = {}
 
-
+// 🔹 MỞ MODAL CHỌN SIZE
 function openSizeModal(id, name, priceS, priceL) {
   currentProduct = { id, name, priceS, priceL }
 
@@ -57,6 +58,7 @@ function openSizeModal(id, name, priceS, priceL) {
   new bootstrap.Modal(document.getElementById("sizeModal")).show()
 }
 
+// 🔹 THÊM VÀO GIỎ THEO SIZE
 async function addToCartWithSize(size) {
   const price = size === "S"
     ? currentProduct.priceS
@@ -72,11 +74,22 @@ async function addToCartWithSize(size) {
     })
   })
 
+  // Đóng modal chọn size
   bootstrap.Modal.getInstance(
     document.getElementById("sizeModal")
   ).hide()
 
-  toggleCart()
+  // 👉 MỞ GIỎ HÀNG (ĐÚNG HÀM)
+  openCartModal()
+}
+
+// 🔹 MỞ MODAL GIỎ HÀNG
+function openCartModal() {
+  new bootstrap.Modal(
+    document.getElementById("cartModal")
+  ).show()
+
+  loadCart() // nếu bạn có hàm render giỏ
 }
 
 // ==================== HÀM ĐỊNH DẠNG GIÁ ====================

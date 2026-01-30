@@ -140,40 +140,49 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<section id="sanpham" class="d-flex justify-content-between align-items-center mb-2">
+<section id="sanpham" class="mb-2">
   <div class="container">
-  <div class="row" id="productGrid"></div>
-</div>
-  <div class="row" id="productGrid">
-  <button class="d-flex justify-content-between align-items-center mb-2" onclick="openSizeModal()">
-  🛒 Xem giỏ hàng
-</button></div></section>
- <!-- Modal thêm vào giỏ -->
+    <div class="row" id="productGrid"></div>
+
+    <div class="text-end mt-3">
+      <button class="btn btn-warning" onclick="openCartModal()">
+        🛒 Xem giỏ hàng
+      </button>
+    </div>
+  </div>
+</section>
+<!-- Modal giỏ hàng -->
 <div class="modal fade" id="cartModal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">🛒 Thêm vào giỏ</h5>
+        <h5 class="modal-title">🛒 Giỏ hàng</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
+
       <div class="modal-body">
         <div id="cartItems"></div>
         <hr>
         <h5>Tổng tiền: <span id="cartTotal">0₫</span></h5>
       </div>
+
       <div class="modal-footer">
         <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
       </div>
     </div>
   </div>
-  <!-- Modal chọn size -->
-<div class="modal fade" id="sizeModal" tabindex="-1">
+</div>
+<!-- Modal chọn size -->
+ <div class="modal fade" id="sizeModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-<div class="modal-header">
+
+      <div class="modal-header">
         <h5 class="modal-title" id="modalProductName"></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
-<div class="modal-body">
+
+      <div class="modal-body">
         <button class="btn btn-outline-success w-100 mb-2" id="sizeSBtn">
           Size S - <span id="priceS"></span>₫
         </button>
@@ -182,10 +191,10 @@
           Size L - <span id="priceL"></span>₫
         </button>
       </div>
+
     </div>
   </div>
 </div>
-
 <input type="button" value="LIÊN HỆ" style="background-color: pink; color: white;">
 <h1> Email: </h1>
 
