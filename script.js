@@ -20,7 +20,7 @@ async function loadProducts() {
           <div class="card-body text-center">
             <h5 class="card-title">${p.name}</h5>
             <p class="card-text text-danger font-weight-bold">S: ${formatPrice(p.priceS)} | L: ${formatPrice(p.priceL)}</p>
-            <button class="btn btn-success" onclick="addtoCartWithSize('${p.id}', '${p.name.replace(/'/g, "\\'")}',   ${p.priceS},
+            <button class="btn btn-success" onclick="openSizeModal('${p.id}', '${p.name.replace(/'/g, "\\'")}',   ${p.priceS},
   ${p.priceL})">
               🛒 Thêm vào giỏ
             </button>
@@ -43,7 +43,8 @@ async function loadProducts() {
 let cart = []
 let currentProduct = {}
 
-function addToCartWithSize(id, name, priceS, priceL) {
+
+function openSizeModal(id, name, priceS, priceL) {
   currentProduct = { id, name, priceS, priceL }
 
   document.getElementById("modalProductName").innerText = name
@@ -55,34 +56,28 @@ function addToCartWithSize(id, name, priceS, priceL) {
 
   new bootstrap.Modal(document.getElementById("sizeModal")).show()
 }
+
 async function addToCartWithSize(size) {
   const price = size === "S"
     ? currentProduct.priceS
     : currentProduct.priceL
 
-  try {
-    await fetch(`${API_URL}/api/cart/add`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        id: `${currentProduct.id}-${size}`,
-        name: `${currentProduct.name} (Size ${size})`,
-        price
-      })
+  await fetch(`${API_URL}/api/cart/add`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      id: `${currentProduct.id}-${size}`,
+      name: `${currentProduct.name} (Size ${size})`,
+      price
     })
+  })
 
-    bootstrap.Modal.getInstance(
-      document.getElementById("sizeModal")
-    ).hide()
+  bootstrap.Modal.getInstance(
+    document.getElementById("sizeModal")
+  ).hide()
 
-    refreshCart()
-    toggleCart()
-  } catch (err) {
-    alert("❌ Không thêm được giỏ hàng")
-    console.error(err)
-  }
+  toggleCart()
 }
-
 
 // ==================== HÀM ĐỊNH DẠNG GIÁ ====================
 function formatPrice(value) {
