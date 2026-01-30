@@ -1,6 +1,6 @@
 // ==================== CẤU HÌNH BACKEND ====================
 // Dùng localhost khi dev, dùng link Render khi deploy
-const API_URL = "https://c-y-c-nh-77-1.onrender.com";
+const API_URL = "https://thaonhinamitea1972000.onrender.com";
 
 // ==================== LOAD SẢN PHẨM ====================
 async function loadProducts() {
