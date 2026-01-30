@@ -10,8 +10,8 @@
   ✅ <!-- FAVICON -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-<link rel="stylesheet" href="./style.css">
-<link href="../caycanh77/images/style css.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./style css.css">
+<link href="./" rel="stylesheet" type="text/css">
 <link href="style css.css" rel="stylesheet" type="text/css">
 <link href="style css.css" rel="stylesheet" type="text/css">
 <!-- jQuery -->
@@ -23,12 +23,22 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="script.js"></script>
+<script src="./script.js"></script>
 
-</head>
 
 <body>
     <a href="https://namiteacoffeeandmilktea.site"></a>
+    <header>
+      <div class="container my-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>☕ Nami Tea, Coffee and Milktea </h4>
+
+      <button class="btn btn-warning" onclick="toggleCart()">
+        🛒 Xem giỏ hàng
+      </button>
+    </div>
+  </div>
+    </header>
 <nav>
     <a href="index.html">Trang chủ</a>
     <a href="index.html">Sản phẩm</a>
@@ -149,69 +159,69 @@
 	  <p>Trà sữa truyền thống</p>
     <div class="card col-md-4"></div>
 
-    <button class="btn btn-success" onclick="addToCart(1, 'Trà sữa truyền thống', S:25000 L:35000)">Thêm vào giỏ</button>
+    <button class="btn btn-success" onclick="openSizeModal(1, 'Trà sữa truyền thống', 25000, 35000 )">Thêm vào giỏ</button>
     </button>
   </div>
 </div>
   <div class="col-md-3">
 	  <div class="card col-md-4"><a href="KIẾN THỨC TRÀ SỮA.html" target="_blank"><img src="mat-cha-latte.jpg"width="300px"; height="300px"alt=" Trà sữa thái xanh"></a>
-	 	 <button class="btn btn-success" onclick="addToCart(2, 'Trà sữa thái xanh', S:25000 L: 35000)">🛒Thêm vào giỏ</button>
+	 	 <button class="btn btn-success" onclick="openSizeModal(2, 'Trà sữa thái xanh', 25000, 35000 )">🛒Thêm vào giỏ</button>
 </div>
 		</div>
   
   <div class="col-md-3">
 	  <div class="card col-md-4"><a href="KIẾN THỨC TRÀ SỮA.html" target="_blank"><img src="tra-sua-pho-mai.jpg" width="300px"; height="300px" alt="Trà sữa phô mai"></a>
-	  	  <button class="btn btn-success" onclick="addToCart(2, 'Trà sữa phô mai', S:25000 L: 35000)">🛒Thêm vào giỏ</button>
+	  	  <button class="btn btn-success" onclick="openSizeModal(2, 'Trà sữa phô mai', 25000, 35000 )">🛒Thêm vào giỏ</button>
 </div>
 	  </div>
   <div class="col-md-3">
 	  <div class="card col-md-4"><a href="TRÀ SỮA VÀ ĐỜI SỐNG.html"target="_blank"><img src="tra-xa-den.jpg"width="300px"; height="300px"alt="Trà xạ đen"></a>
 	  <p>Trà xạ đen</p>
-<button class="btn btn-success" onclick="addToCart(2, 'Trà xạ đen', S:20000 L: 30000)">🛒Thêm vào giỏ</div></button>
+<button class="btn btn-success" onclick="openSizeModal(2, 'Trà xạ đen', 25000, 35000 )">🛒Thêm vào giỏ</div></button>
 </div>
 	  </div>
   <div class="col-md-3">
     <div class="card col-md-4"><a href="TRÀ SỮA VÀ ĐỜI SỐNG.html"target="_blank"><img src="ca-phe-muoi.jpg"width="300px"; height="300px"alt="Cà phê muối"></a>
    	  <p>Cà phê muối</p>
-	 <button class="btn btn-success" onclick="addToCart(2, 'Cà phê muối', S:30000 L: 40000)">🛒Thêm vào giỏ</button>
+	 <button class="btn btn-success" onclick="openSizeModal(2, 'Cà phê muối', 30000, 40000 )">🛒Thêm vào giỏ</button>
 </div>
 	  </div>
 <div class="col-md-3">
     <div class="card col-md-4"><a href="TRÀ SỮA VÀ ĐỜI SỐNG.html" target="_blank"><img src="ca-phe-sua.jpeg"width="300px"; height="300px"alt="Cà phê sữa"></a>
-       <button class="btn btn-success" onclick="addToCart(2, 'Cà phê sữa',S:25000 L: 35000)">🛒Thêm vào giỏ</a></button>
+       <button class="btn btn-success" onclick="openSizeModal(2, 'Cà phê sữa', 20000, 30000 )">🛒Thêm vào giỏ</a></button>
 </div>
 	<div class="col-md-3">
     <div class="card col-md-4"><a href="TRÀ SỮA VÀ ĐỜI SỐNG.html" target="_blank"><img src="./tra-chanh-mat-ong.jpg"width="300px"; height="300px"alt="Trà chanh mật ong"></a>
 	  <p>Trà chanh mật ong</p>
-	 <button class="btn btn-success" onclick="addToCart(2, 'Trà chanh mật ong',S:25000 L: 35000)">🛒Thêm vào giỏ</a></button>
+	 <button class="btn btn-success" onclick="openSizeModal(2, 'Trà chanh mật ong', 30000, 40000 )">🛒Thêm vào giỏ</a></button>
 </div>
 		<div class="col-md-3">
     <div class="card col-md-4"><a href="TRÀ SỮA VÀ ĐỜI SỐNG.html" target="_blank"><img src="./tra-cam-mat-ong.jpg"width="300px"; height="300px"alt="Trà-cam-mat-ong"></a>
 	  <p>Trà cam mật ong </p>
-	 <button class="btn btn-success" onclick="addToCart(2, 'Trà cam mật ong',S:35000 L: 40000)">🛒Thêm vào giỏ</button>
+	 <button class="btn btn-success" onclick="openSizeModal(2, 'Trà cam mật ong', 35000, 45000)">🛒Thêm vào giỏ</button>
 </div>
 			<div class="col-md-3">
     <div class="card col-md-4"><a href="TRÀ SỮA VÀ ĐỜI SỐNG.html" target="_blank"><img src="./tra-mat-ong.jpg"width="300px"; height="300px"alt="Trà mật ong"></a>
 	  <p>Trà mật ong</p>
-	 <button class="btn btn-success" onclick="addToCart(2, 'Trà mật ong',S:30000 L: 35000)">🛒Thêm vào giỏ</button>
+	 <button class="btn btn-success" onclick="openSizeModal(2, 'Trà mật ong', 35000, 45000 )">🛒Thêm vào giỏ</button>
 </div>
 				<div class="col-md-3">
     <div class="card col-md-4"><a href="TRÀ SỮA VÀ ĐỜI SỐNG.html" target="_blank"><img src="./tra-hoa-cuc.jpg"width="300px"; height="300px"alt="Trà hoa cúc"></a>
 	  <p>Trà hoa cúc </p>
-	 <button class="btn btn-success" onclick="addToCart(2, 'Trà hoa cúc',S:40000 L: 50000)">🛒Thêm vào giỏ</button>
+	 <button class="btn btn-success" onclick="openSizeModal(2, 'Trà hoa cúc', 40000, 50000 )">🛒Thêm vào giỏ</button>
 </div>
 			<div class="col-md-3">
     <div class="card col-md-4"><a href="TRÀ SỮA VÀ ĐỜI SỐNG.html" target="_blank"><img src="./pho-mai-topping.jpg"width="300px"; height="300px"alt="Phô mai topping"></a>
 	  <p> Phô mai topping </p>
-	 <button class="btn btn-success" onclick="addToCart(2, 'Phô mai topping',S:12000 L: 20000)">🛒Thêm vào giỏ</button>
+	 <button class="btn btn-success" onclick="openSizeModal(2, 'Phô mai topping', 20000, 30000 )">🛒Thêm vào giỏ</button>
 </div>
 </div>
+ <!-- Modal thêm vào giỏ -->
 <div class="modal fade" id="cartModal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">🛒 Th</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h5 class="modal-title">🛒 Thêm vào giỏ</h5>
       </div>
       <div class="modal-body">
         <div id="cartItems"></div>
@@ -223,15 +233,31 @@
       </div>
     </div>
   </div>
-</div>
-<div class="cart" id="cart">
-    <h4>Giỏ hàng</h4>
-    <div id="cartItems"></div>
-    <div style="margin-top:10px; font-weight:bold;">Tổng: <span id="cartTotal">0tr₫</span></div>
+  <!-- Modal chọn size -->
+<!-- Modal chọn size -->
+<div class="modal fade" id="sizeModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
 
-<button class="checkout" onclick="checkout()"><a href="https://www.facebook.com/nguyen.ngoc.thao.nhi.809045">Thanh toán</a></button>
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalProductName"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <button class="btn btn-outline-success w-100 mb-2" id="sizeSBtn">
+          Size S - <span id="priceS"></span>₫
+        </button>
+
+        <button class="btn btn-outline-success w-100" id="sizeLBtn">
+          Size L - <span id="priceL"></span>₫
+        </button>
+      </div>
+
+    </div>
   </div>
-</section>
+</div>
+
 <input type="button" value="LIÊN HỆ" style="background-color: pink; color: white;">
 <h1> Email: </h1>
 

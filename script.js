@@ -20,7 +20,8 @@ async function loadProducts() {
           <div class="card-body text-center">
             <h5 class="card-title">${p.name}</h5>
             <p class="card-text text-danger font-weight-bold">${formatPrice(p.price)}</p>
-            <button class="btn btn-success" onclick="addToCart('${p.id}', '${p.name.replace(/'/g, "\\'")}', ${p.price})">
+            <button class="btn btn-success" onclick="openSizeModal('${p.id}', '${p.name.replace(/'/g, "\\'")}',   ${p.priceS},
+  ${p.priceL})">
               🛒 Thêm vào giỏ
             </button>
              <br>
@@ -38,6 +39,50 @@ async function loadProducts() {
     console.error("❌ Lỗi load product.json:", err);
   }
 }
+// Modal thêm vào giỏ
+let cart = []
+let currentProduct = {}
+
+function openSizeModal(id, name, priceS, priceL) {
+  currentProduct = { id, name, priceS, priceL }
+
+  document.getElementById("modalProductName").innerText = name
+  document.getElementById("priceS").innerText = priceS.toLocaleString()
+  document.getElementById("priceL").innerText = priceL.toLocaleString()
+
+  document.getElementById("sizeSBtn").onclick = () => addToCartWithSize("S")
+  document.getElementById("sizeLBtn").onclick = () => addToCartWithSize("L")
+
+  new bootstrap.Modal(document.getElementById("sizeModal")).show()
+}
+async function addToCartWithSize(size) {
+  const price = size === "S"
+    ? currentProduct.priceS
+    : currentProduct.priceL
+
+  try {
+    await fetch(`${API_URL}/api/cart/add`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id: `${currentProduct.id}-${size}`,
+        name: `${currentProduct.name} (Size ${size})`,
+        price
+      })
+    })
+
+    bootstrap.Modal.getInstance(
+      document.getElementById("sizeModal")
+    ).hide()
+
+    refreshCart()
+    toggleCart()
+  } catch (err) {
+    alert("❌ Không thêm được giỏ hàng")
+    console.error(err)
+  }
+}
+
 
 // ==================== HÀM ĐỊNH DẠNG GIÁ ====================
 function formatPrice(value) {
@@ -188,3 +233,11 @@ window.onload = () => {
   loadProducts();
   refreshCart();
 };
+
+
+
+
+
+
+
+
