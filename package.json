@@ -2,7 +2,7 @@
   "name": "namiteacoffeeandmilktea-web",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "master": "server.js",
   "scripts": {
   "start": "node server.js"
 },
