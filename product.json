@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "Trà sữa truyền thống",
+    "price": 25000, 
+    "image": "tra-sua-den.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Trà sữa thái xanh",
+    "price": 250000,
+    "image": "ma-cha-sua.jpg"
+  },
+  
+  {
+    "id": 3,
+    "name": "Trà sữa phô mai",
+    "price": 350000,
+    "image": "tra-sua-pho-mai.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Trà xạ đen",
+    "price": 35000,
+    "image": "tra-xa-den.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Cà phê muối",
+    "price": 400000,
+    "image": "ca-phe-muoi.jpg"
+  }
+  {
+    "id": 6,
+    "name": "Cà phê sữa",
+    "price": 200000,
+    "image": "ca-phe-sua.jpg"
+  }
+ {
+    "id": 7,
+    "name": "Phô mai topping",
+    "price": 200000,
+    "image": "pho-mai-topping.jpg"
+  }
+{
+    "id": 8,
+    "name": "Trà hoa cúc",
+    "price": 300000,
+    "image": "tra-hoa-cuc.jpg"
+  {
+     "id": 9,
+    "name": "Trà hoa cúc",
+    "price": 300000,
+    "image": "tra-hoa-cuc.jpg"
+  }
+  {
+     "id": 10,
+    "name": "Trà chanh-mat-ong",
+    "price": 300000,
+    "image": "tra-chanh-mat-ong.jpg"
+  }
+
+  {
+     "id": 11,
+    "name": "Trà mật ong",
+    "price": 300000,
+    "image": "tra-mat-ong.jpg"
+  }
+  {
+     "id": 12,
+    "name": "Trà cam mật ong",
+    "price": 300000,
+    "image": "tra-cam-mat-ong.jpg"
+  }
+]
