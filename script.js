@@ -39,11 +39,11 @@ async function loadProducts() {
     console.error("❌ Lỗi load product.json:", err);
   }
 }
-// Modal thêm vào giỏ
+// Thêm vào giỏ hàng
 let cart = []
 let currentProduct = {}
 
-function openSizeModal(id, name, priceS, priceL) {
+function addToCart(id, name, priceS, priceL) {
   currentProduct = { id, name, priceS, priceL }
 
   document.getElementById("modalProductName").innerText = name
@@ -103,27 +103,6 @@ function toggleCart() {
   }
   refreshCart();
 }
-
-// Thêm vào giỏ hàng
-async function addToCart(id, name, price) {
-  try {
-    const res = await fetch(`${API_URL}/api/cart/add`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id, name, price })
-    });
-
-    if (!res.ok) throw new Error("Lỗi khi thêm giỏ hàng");
-
-    await refreshCart();
-    // Hiện popup ngay khi thêm
-    toggleCart();
-  } catch (err) {
-    console.error("❌ Lỗi addToCart:", err);
-    alert("Không thể thêm vào giỏ hàng (kiểm tra backend Render).");
-  }
-}
-
 // Cập nhật số lượng
 async function updateQty(id, qty) {
   if (qty < 1) return removeFromCart(id);
