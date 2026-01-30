@@ -1,12 +1,21 @@
-const express = require('express')
-const cors = require('cors')
+const express = require("express")
+const cors = require("cors")
+const fs = require("fs")
+const path = require("path")
 
 const app = express()
+const PORT = process.env.PORT || 3000
+
 app.use(cors())
 app.use(express.json())
-
 // 🛒 Giỏ hàng (lưu tạm RAM)
 let cart = []
+// API products cho thêm vào giỏ
+app.get("/api/products", (req, res) => {
+  const filePath = path.join(__dirname, "product.json")
+  const data = fs.readFileSync(filePath, "utf8")
+  res.json(JSON.parse(data))
+})
 
 // ➕ Thêm vào giỏ hàng
 app.post('/api/cart/add', (req, res) => {
