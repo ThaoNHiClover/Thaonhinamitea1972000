@@ -20,7 +20,7 @@ async function loadProducts() {
           <div class="card-body text-center">
             <h5 class="card-title">${p.name}</h5>
             <p class="card-text text-danger font-weight-bold">S: ${formatPrice(p.priceS)} | L: ${formatPrice(p.priceL)}</p>
-            <button class="btn btn-success" onclick="addtoCart('${p.id}', '${p.name.replace(/'/g, "\\'")}',   ${p.priceS},
+            <button class="btn btn-success" onclick="addtoCartWithSize('${p.id}', '${p.name.replace(/'/g, "\\'")}',   ${p.priceS},
   ${p.priceL})">
               🛒 Thêm vào giỏ
             </button>
@@ -43,7 +43,7 @@ async function loadProducts() {
 let cart = []
 let currentProduct = {}
 
-function addToCart(id, name, priceS, priceL) {
+function addToCartWithSize(id, name, priceS, priceL) {
   currentProduct = { id, name, priceS, priceL }
 
   document.getElementById("modalProductName").innerText = name
@@ -182,7 +182,7 @@ async function checkout() {
   }
 
   // 🔥 GỬI ĐƠN SANG BACKEND PHP
-  const send = await fetch("http://caycanh77.site/xuly_dathang.php", {
+  const send = await fetch("http://namiteacoffeeandmilktea.site/xuly_dathang.php", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
