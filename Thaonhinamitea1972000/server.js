@@ -6,7 +6,7 @@ const cors = require("cors")
 const fs = require("fs")
 const path = require("path")
 
-const connectDB = require("./config.db.js")
+const connectDB = require("./config/db.js")
 const Product = require("./models/Product")
 
 const app = express()
