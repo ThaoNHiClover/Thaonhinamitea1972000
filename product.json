@@ -68,14 +68,14 @@
     "name": "Trà hoa cúc",
     "priceS": 40000,
   "priceL": 50000,
-    "image": "tra-hoa-cuc.jpg"
+    "image": "./hinh anh/tra-hoa-cuc.jpg"
     },
      {
     "id": 11,
     "name": "Phô mai topping",
     "priceS": 20000,
   "priceL": 30000,
-    "image": "pho-mai-topping.jpg"
+    "image": "./hinh anh/pho-mai-topping.jpg"
     }
 ]
 
