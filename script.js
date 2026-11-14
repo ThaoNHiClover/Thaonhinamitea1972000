@@ -25,10 +25,10 @@ async function loadProducts() {
               🛒 Thêm vào giỏ
             </button>
              <br>
-      <a href="https://www.facebook.com/nguyen.ngoc.thao.nhi.809045"
+      <a href="https://www.zalo.me/0877456311/"
          target="_blank"
          style="color:#1877f2;font-size:14px;">
-        📘 Liên hệ Facebook
+        📘 Liên hệ Zalo
       </a>
           </div>
         </div>
